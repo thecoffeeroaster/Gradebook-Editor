@@ -29,12 +29,12 @@ public class View extends JFrame implements ActionListener {
     /**
      * The width of the View frame. Define a private class constant.
      */
-    ???
+    //???
 
     /**
      * The height of the View frame. Define a private class constant.
      */
-    ???
+    //???
 
     /**
      * When the View() ctor is called from Main.run() to create the View, run() passes a reference
@@ -44,12 +44,12 @@ public class View extends JFrame implements ActionListener {
      * mMain is made accessible within this class via accessor/mutator methods getMain() and
      * setMain(). It shall not be directly accessed.
      */
-    ???
+    //???
 
     /*
      * Declare GUI related instance variables for the buttons and text fields.
      */
-    ???
+    //???
 
     /**
      * View()
@@ -74,7 +74,7 @@ public class View extends JFrame implements ActionListener {
         // Create mSearchButton with the label "Search"
         // Make this View the action listener for the button
         // Add the button to the panel
-        ???
+        //???
 
         // PSEUDOCODE:
         // Create a JPanel named panelHomework which uses the FlowLayout
@@ -85,13 +85,13 @@ public class View extends JFrame implements ActionListener {
         //     Add mHomeworkText[i] to the panel
         // End For
         // Note: DO NOT HARDCODE THE NUMBER OF HOMEWORK ASSIGNMENTS
-        ???
+        //???
 
         // Create the exam panel which contains the "Exam: " label and the two exam text fields.
         // The pseudocode is omitted because this code is very similar to the code that creates the
         // panelHomework panel above.
         // Note: DO NOT HARDCODE THE NUMBER OF EXAMS
-        ???
+        //???
 
         // PSEUDOCODE:
         // Create a JPanel named panelButtons using FlowLayout
@@ -100,7 +100,7 @@ public class View extends JFrame implements ActionListener {
         // Add the  Clear button to the panel
         // Repeat the three above statements for the Save button
         // Repeat the three above statements for the Exit button
-        ???
+        //???
 
         // PSEUDOCODE:
         // Create a JPanel named panelMain using a vertical BoxLayout
@@ -108,10 +108,10 @@ public class View extends JFrame implements ActionListener {
         // Add panelHomework to panelMain
         // Add panelExam to panelMain
         // Add panelButtons to panelMain
-        ???
+        //???
 
         // Set the title of the View to whatever you want by calling setTitle()
-        ???
+        //???
 
         // Set the size of the View to FRAME_WIDTH x FRAME_HEIGHT
         setSize(FRAME_WIDTH, FRAME_HEIGHT);
@@ -123,7 +123,7 @@ public class View extends JFrame implements ActionListener {
         // button in the title bar of the View so now the only way to exit the program is by click-
         // ing the Exit button. This ensures that Main.exit() will be called so it will write the
         // student records back out to the gradebook database.
-        ???
+        //???
 
         // Add panelMain to the View.
         add(panelMain);
@@ -131,7 +131,7 @@ public class View extends JFrame implements ActionListener {
         // If you are a Mac user, you may need to call the pack() method which is inherited from
         // java.awt.Window() now to pack the View before displaying it. Windows and Linux users do
         // not need to do this, although if you do, it will not cause any problems.
-        // ???
+        // //???
 
         // Now display the View by calling setVisible().
         setVisible(true);
@@ -177,7 +177,7 @@ public class View extends JFrame implements ActionListener {
      * End If
      * end actionPerformed
      */
-    ???
+    //???
 
     /**
      * clear()
@@ -195,7 +195,7 @@ public class View extends JFrame implements ActionListener {
      *     Set the current Student object in the Student class to null
      * end clear
      */
-    ???
+    //???
 
     /**
      * clearNumbers()
@@ -204,7 +204,7 @@ public class View extends JFrame implements ActionListener {
      *
      * DO NOT HARCODE THE NUMBER OF HOMEWORKS AND EXAMS
      */
-    ???
+    //???
 
     /**
      * displayStudent()
@@ -226,7 +226,7 @@ public class View extends JFrame implements ActionListener {
      *
      * DO NOT HARCODE THE NUMBER OF HOMEWORKS AND EXAMS
      */
-    ???
+    //???
 
     /**
      * Accessor method for mMain.
@@ -249,7 +249,7 @@ public class View extends JFrame implements ActionListener {
      *     Call JOptionPane.showMessageDialog() to display pMessage.
      * end messageBox
      */
-    ???
+    //???
 
     /**
      * saveStudent()
@@ -269,7 +269,7 @@ public class View extends JFrame implements ActionListener {
      *
      * DO NOT HARDCODE THE NUMBER OF HOMEWORKS AND EXAMS
      */
-    ???
+    //???
 
     /**
      * Mutator method for mMain.
