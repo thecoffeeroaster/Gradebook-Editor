@@ -1,13 +1,16 @@
-//**************************************************************************************************
-// CLASS: View
-//
-// AUTHOR
-// Kevin R. Burger (burgerk@asu.edu)
-// Computer Science & Engineering Program
-// Fulton Schools of Engineering
-// Arizona State University, Tempe, AZ 85287-8809
-// (c) Kevin R. Burger 2014-2022
-//**************************************************************************************************
+/************************************************************************************************
+ * CLASS: View (View.java)
+ *
+ * DESCRIPTION
+ * (ENTER DESCRIPTION)
+ *
+ * COURSE AND PROJECT INFORMATION
+ * CSE 205 Object Oriented Programming and Data Structures, Spring A 2022
+ * Project Number: project-3
+ *
+ * AUTHORS: Joshua McKenzie, ASU ID: 1209056897, jsmckenz@asu.edu
+ *        | Sean! Place your info here!
+ ************************************************************************************************/
 package proj3;
 
 import java.awt.event.ActionEvent;
