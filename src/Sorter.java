@@ -1,5 +1,6 @@
 import java.util.ArrayList;
-
+import java.util.Comparator;
+import java.util.Collections;
 /************************************************************************************************
  * CLASS: Sorter (Sorter.java)
  *
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 
 public class Sorter
 {
-    public static void sort(ArrayList<Student> mStudentList) {
+    public static ArrayList<Student> sort(ArrayList<Student> mStudentList) {
     }
     //args
 }
