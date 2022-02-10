@@ -25,10 +25,14 @@ public class Roster {
      * Declare mStudentList as ArrayList<Student>
      */
     //???
+    private ArrayList<Student> mStudentList;
+
+
+
 
     /**
      * Roster()
-     *
+
      * PSEUDOCODE:
      * method Roster()
      *     -- Note that mStudentList was already declared so we do not need to declare it here.
@@ -38,7 +42,11 @@ public class Roster {
      *     setStudentList() to make mStudentList refer to the ArrayList
      * end Roster
      */
-    //???
+    public Roster ()
+    {
+        mStudentList = new ArrayList<>();
+        setStudentList(mStudentList);
+    }
 
     /**
      * addStudent()
@@ -51,6 +59,10 @@ public class Roster {
      * end method
      */
     //???
+    public void addStudent(Student pStudent)
+    {
+        mStudentList.add(pStudent)
+    }
 
     /**
      * getStudent()
@@ -68,7 +80,18 @@ public class Roster {
      *     else return the Student object in getStudentList() at index 'index'
      * end getStudent
      */
-    //???
+    public Student getStudent(String pLastName)
+    {
+        int index = Searcher.search(getStudentList(), pLastName);
+        if (index ==-1)
+        {
+            return null;
+        }else{
+            return mStudentList.get(index);
+        }
+
+
+    }
 
     /**
      * getStudentList()
@@ -107,8 +130,10 @@ public class Roster {
      *     call Sorter.sort() passing the list of students returned from getStudentList()
      * end sortRoster
      */
-    //???
-
+    public void sortRoster()
+    {
+        Sorter.sort(mStudentList);
+    }
     /**
      * Returns a String representation of this Roster. toString() methods are very handy for
      * debugging because given access to a Roster object, say named roster, then you can print
