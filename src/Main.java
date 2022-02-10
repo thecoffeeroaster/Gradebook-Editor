@@ -141,8 +141,18 @@ public class Main
     {
         //args
         JFrame.setDefaultLookAndFeelDecorated(true);
-        mView.setView(new View(this));
-
+        setView(new View(this));
+        try
+        {
+            GradebookReader gbReader = new GradebookReader("gradebook.dat");
+            this.mRoster = gbReader.readGradebook();
+            setRoster(this.mRoster);
+        }
+        catch(FileNotFoundException fnfe)
+        {
+            getView().messageBox("Could not open \"gradebook.dat\" for reading. Exiting.");
+            System.exit(-1);
+        }
     }
 
     /**
