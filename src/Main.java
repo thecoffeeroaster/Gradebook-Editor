@@ -19,7 +19,12 @@ import javax.swing.JFrame;
 /**
  * The Main class containing the main() and run() methods.
  */
-public class Main {
+public class Main
+{
+    private final int NUM_EXAMS = 3;
+    private final int NUM_HOMEWORKS = 5;
+    private Roster mRoster;
+    private View mView;
 
     /**
      * The Roster of students that is read from the input file "gradebook.dat".
