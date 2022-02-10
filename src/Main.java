@@ -23,23 +23,25 @@ public class Main
 {
     private final int NUM_EXAMS = 3;
     private final int NUM_HOMEWORKS = 5;
-    private Roster mRoster;
-    private View mView;
 
     /**
      * The Roster of students that is read from the input file "gradebook.dat".
      */
-    //???
+    private Roster mRoster;
 
     /**
      * A reference to the View object.
      */
-    //???
+    private View mView;
 
     /**
      * This is where execution starts. Instantiate a Main object and then call run().
      */
-    //???
+    public void main(String[] pArgs)
+    {
+        Main main = new Main();
+        main.run();
+    }
 
     /**
      * exit() is called when the Exit button in the View is clicked. When we exit we have to write
@@ -78,14 +80,16 @@ public class Main
     /**
      * Accessor method for mRoster.
      */
-    private Roster getRoster() {
+    private Roster getRoster()
+    {
         return mRoster;
     }
 
     /**
      * Accessor method for mView.
      */
-    private View getView() {
+    private View getView()
+    {
         return mView;
     }
 
