@@ -14,9 +14,10 @@ import java.util.ArrayList;
  *        | Sean Loehr, ASU ID: 1222435526, smloehr@asu.edu
  ************************************************************************************************/
 
-public class Sorter
+public class Sorter //Sean is going to complete
 {
-    public static void sort(ArrayList<Student> mStudentList) {
+    public static void sort(ArrayList<Student> mStudentList)
+    {
+        //args
     }
-    //args
 }
