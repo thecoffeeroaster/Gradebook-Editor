@@ -2,7 +2,7 @@
  * CLASS: GradebookWriter (GradebookWriter.java)
  *
  * DESCRIPTION
- * (ENTER DESCRIPTION)
+ * An extension of the PrintWriter class that writes the student's description to the file.
  *
  * COURSE AND PROJECT INFORMATION
  * CSE 205 Object Oriented Programming and Data Structures, Spring A 2022
