@@ -41,6 +41,7 @@ public class Main
     {
         Main main = new Main();
         main.run();
+        //Not sure if I did this right.
     }
 
     /**
@@ -67,7 +68,16 @@ public class Main
      */
     public void exit()
     {
-        //args
+        try
+        {
+            GradebookWriter gbWriter = new GradebookWriter("gradebook.dat");
+            gbWriter.writeGradebook(getRoster());
+            System.exit(0);
+        }
+        catch(FileNotFoundException fnfe)
+        {
+
+        }
     }
 
     /**
@@ -131,6 +141,7 @@ public class Main
     {
         //args
         JFrame.setDefaultLookAndFeelDecorated(true);
+        this.mView = new View();
 
     }
 
