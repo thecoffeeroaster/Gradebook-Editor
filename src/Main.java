@@ -65,17 +65,26 @@ public class Main
      *     end try-catch
      * end exit
      */
-    //???
+    public void exit()
+    {
+        //args
+    }
 
     /**
      * This method returns the number of exams in the class.
      */
-    //???
+    public static int getNumExams()
+    {
+        //args
+    }
 
     /**
      * This method returns the number of homework assignments in the class.
      */
-    //???
+    public static int getNumHomeworks()
+    {
+        //args
+    }
 
     /**
      * Accessor method for mRoster.
@@ -118,7 +127,10 @@ public class Main
      *     end try-catch
      * end run
      */
-    //???
+    private void run()
+    {
+
+    }
 
     /**
      * search() is called when the Search button is clicked in the View. The input parameter is
@@ -133,7 +145,10 @@ public class Main
      *     call getRoster().getStudent(pLastName) and return what getStudent() returns
      * end search
      */
-    //???
+    public Student search(String pLastName)
+    {
+
+    }
 
     /**
      * Mutator method for mRoster.
