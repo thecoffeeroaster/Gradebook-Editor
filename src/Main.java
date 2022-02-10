@@ -141,7 +141,7 @@ public class Main
     {
         //args
         JFrame.setDefaultLookAndFeelDecorated(true);
-        mView.setView(new View(this));
+        setView(new View(this));
 
     }
 
