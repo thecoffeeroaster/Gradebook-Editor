@@ -129,6 +129,8 @@ public class Main
      */
     private void run()
     {
+        //args
+        JFrame.setDefaultLookAndFeelDecorated(true);
 
     }
 
