@@ -9,7 +9,7 @@
  * Project Number: project-3
  *
  * AUTHORS: Joshua McKenzie, ASU ID: 1209056897, jsmckenz@asu.edu
- *        | Sean! Place your info here!
+ *        | Sean Loehr, ASU ID: 1222435526, smloehr@asu.edu
  ************************************************************************************************/
 //package proj3; //I don't think this will work with our current working directories
 
