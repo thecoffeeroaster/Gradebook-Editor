@@ -31,13 +31,15 @@ public class View extends JFrame implements ActionListener {
 
     /**
      * The width of the View frame. Define a private class constant.
+     *
+     * ^^^Here it says create a private class constant but in the UML it says public
      */
-    //???
+    public static int FRAME_WIDTH = 525;
 
     /**
      * The height of the View frame. Define a private class constant.
      */
-    //???
+    public static int FRAME_HEIGHT = 225;
 
     /**
      * When the View() ctor is called from Main.run() to create the View, run() passes a reference
@@ -49,7 +51,7 @@ public class View extends JFrame implements ActionListener {
      */
     //???
 
-    /*
+    /**
      * Declare GUI related instance variables for the buttons and text fields.
      */
     //???
