@@ -11,7 +11,7 @@
  * AUTHORS: Joshua McKenzie, ASU ID: 1209056897, jsmckenz@asu.edu
  *        | Sean! Place your info here!
  ************************************************************************************************/
-package proj3;
+//package proj3; //I don't think this will work with our current working directories
 
 import java.io.FileNotFoundException;
 import javax.swing.JFrame;
