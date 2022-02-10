@@ -11,7 +11,6 @@
  * AUTHORS: Joshua McKenzie, ASU ID: 1209056897, jsmckenz@asu.edu
  *        | Sean Loehr, ASU ID: 1222435526, smloehr@asu.edu
  ************************************************************************************************/
-//package proj3; //I don't think this will work with our current working directories
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -30,7 +29,10 @@ public class GradebookWriter extends PrintWriter {
      *
      * @param pFname The name of the output file to be opened for writing.
      */
-    //???
+    public GradebookWriter(String pFname) throws FileNotFoundException
+    {
+        super(pFname);
+    }
 
     /**
      * Writes the gradebook info to the output file which was opened in the ctor.
@@ -45,5 +47,12 @@ public class GradebookWriter extends PrintWriter {
      *     Call close()
      * end writeGradebook
      */
-    //???
+    public void writeGradebook(Roster pRoster)
+    {
+        for(Student student : pRoster)
+        {
+            println(student);
+        }
+        close();
+    }
 }
