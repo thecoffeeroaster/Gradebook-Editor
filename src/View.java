@@ -13,12 +13,9 @@
  ************************************************************************************************/
 //package proj3; //I don't think this will work with our current working directories
 
+import java.awt.*;
 import java.awt.event.ActionListener;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 
 /**
  * The View class implements the GUI. It is a subclass of JFrame and implements the ActionListener
@@ -127,7 +124,19 @@ public class View extends JFrame implements ActionListener {
         // Add the  Clear button to the panel
         // Repeat the three above statements for the Save button
         // Repeat the three above statements for the Exit button
-        //???
+        JPanel panelButtons = new JPanel();
+
+        mClearButton = new JButton("Clear");
+        mClearButton.addActionListener(this);
+        panelButtons.add(mClearButton);
+
+        mSaveButton = new JButton("Save");
+        mSaveButton.addActionListener(this);
+        panelButtons.add(mSaveButton);
+
+        mExitButton = new JButton("Exit");
+        mExitButton.addActionListener(this);
+        panelButtons.add(mExitButton);
 
         // PSEUDOCODE:
         // Create a JPanel named panelMain using a vertical BoxLayout
@@ -135,7 +144,12 @@ public class View extends JFrame implements ActionListener {
         // Add panelHomework to panelMain
         // Add panelExam to panelMain
         // Add panelButtons to panelMain
-        //???
+        JPanel panelMain = new JPanel();
+        panelMain.setLayout(new BoxLayout(this, BoxLayout.X_AXIS);
+        panelMain.add(panelSearch);
+        panelMain.add(panelHomework);
+        panelMain.add(panelExam);
+        panelMain.add(panelButtons);
 
         // Set the title of the View to whatever you want by calling setTitle()
         setTitle("Grade_ed :: Gradebook Editor");
