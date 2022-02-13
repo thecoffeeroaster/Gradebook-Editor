@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.lang.Comparable;
-
+import java.lang.Math;
 /************************************************************************************************
  * CLASS: Sorter (Sorter.java)
  *
@@ -48,6 +48,9 @@ public class Sorter
 
     private static int partition(ArrayList<Student> pList, int pFromIdx, int pToIdx)
     {
+        //Redo in Hoare Method
+
+
         return (pFromIdx + pToIdx)/2;
     }
 
@@ -62,6 +65,6 @@ public class Sorter
 
     private static void swap(ArrayList<Student> pList, int pIdx1, int pIdx2)
     {
-        //args
+        //Call Swap inside quicksort method
     }
 }
