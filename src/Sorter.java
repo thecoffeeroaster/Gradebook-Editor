@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-import java.lang.Comparable;
-import java.lang.Math;
 /************************************************************************************************
  * CLASS: Sorter (Sorter.java)
  *
@@ -41,7 +39,7 @@ public class Sorter
         int pFromIdx= start -1;
         int pToIdx= end+1;
 
-        while (pFromIdx<pToIdx)
+        while (pFromIdx<pToIdx);
         {
             pFromIdx++;
 

@@ -138,7 +138,7 @@ public class View extends JFrame implements ActionListener {
         //???
 
         // Set the title of the View to whatever you want by calling setTitle()
-        //???
+        setTitle("Grade_ed :: Gradebook Editor");
 
         // Set the size of the View to FRAME_WIDTH x FRAME_HEIGHT
         setSize(FRAME_WIDTH, FRAME_HEIGHT);
