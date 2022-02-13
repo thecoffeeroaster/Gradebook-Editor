@@ -193,7 +193,10 @@ public class Student implements Comparable<Student> {
      *
      * Returns the student's full name in the format: "lastname, firstname".
      */
-    //???
+    public String getFullName()
+    {
+        return mLastName + ", " + mFirstName;
+    }
 
     /**
      * getHomework()
