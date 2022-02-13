@@ -14,6 +14,18 @@ import java.util.ArrayList;
  *        | Sean Loehr, ASU ID: 1222435526, smloehr@asu.edu
  ************************************************************************************************/
 
+/**
+ * public class Quicksort {
+ * public void quicksort (int[] A) {
+ * private void quicksort (int[] A, int low, int high) {
+ * private void swap (int[] A, int indexl, int index2) {
+ * // returns random pivot index between low and high inclusive.
+ * private int getPivot (int low, int high) {
+ * // moves all n < pivot to left of pivot and all n > pivot
+ * // to right of pivot, then returns pivot index.
+ * private int partition(int[] A, int low, int high) (
+ * public static void main (String[] args) {
+ */
 public class Sorter
 //public class QuickSort
 //{
