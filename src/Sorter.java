@@ -15,7 +15,19 @@ import java.util.ArrayList;
  ************************************************************************************************/
 
 public class Sorter
-{
+//public class QuickSort
+//{
+    //public void quicksort (int[] A)
+    //{
+    //private void quicksort (int[] A, int low, int high)
+    //{
+    //private void swap (int[] A, int index1, int index2)
+    //{
+    //private int getPivot(int low, int high)
+    //{
+    //private int partition (int[] A, int low, int high)
+    //{
+
     public static ArrayList<Student> sort(ArrayList<Student> mStudentList) {
     }
     //args
