@@ -34,6 +34,8 @@ public class View extends JFrame implements ActionListener {
      */
     private static final int FRAME_WIDTH = 525;
     private static final int FRAME_HEIGHT = 225;
+    private static final int NUM_HOMEWORKS = 5;
+    private static final int NUM_EXAMS = 3;
 
     /**
      * Declare GUI related instance variables for the buttons and text fields.
@@ -101,7 +103,14 @@ public class View extends JFrame implements ActionListener {
         //     Add mHomeworkText[i] to the panel
         // End For
         // Note: DO NOT HARDCODE THE NUMBER OF HOMEWORK ASSIGNMENTS
-        JPanel panelHomework
+        JPanel panelHomework = new JPanel();
+        panelHomework.add(new JLabel("Homework: "));
+        mHomeworkText = new JTextField[NUM_HOMEWORKS];
+        for(JTextField i : mHomeworkText)
+        {
+            mHomeworkText[i] = new JTextField(NUM_HOMEWORKS);
+            panelHomework.add(mHomeworkText[i]);
+        }
 
         // Create the exam panel which contains the "Exam: " label and the two exam text fields.
         // The pseudocode is omitted because this code is very similar to the code that creates the
