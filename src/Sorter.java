@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.lang.Comparable;
 
 /************************************************************************************************
  * CLASS: Sorter (Sorter.java)
