@@ -31,8 +31,6 @@ public class View extends JFrame implements ActionListener {
      */
     private static final int FRAME_WIDTH = 525;
     private static final int FRAME_HEIGHT = 225;
-    private static final int NUM_HOMEWORKS = 5;
-    private static final int NUM_EXAMS = 3;
 
     /**
      * Declare GUI related instance variables for the buttons and text fields.
@@ -102,7 +100,7 @@ public class View extends JFrame implements ActionListener {
         // Note: DO NOT HARDCODE THE NUMBER OF HOMEWORK ASSIGNMENTS
         JPanel panelHomework = new JPanel();
         panelHomework.add(new JLabel("Homework: "));
-        mHomeworkText = new JTextField[NUM_HOMEWORKS];
+        mHomeworkText = new JTextField[mMain.getNumHomeworks()];
         for(int i = 0; i < mHomeworkText.length; i++)
         {
             mHomeworkText[i] = new JTextField(5);
@@ -115,7 +113,7 @@ public class View extends JFrame implements ActionListener {
         // Note: DO NOT HARDCODE THE NUMBER OF EXAMS
         JPanel panelExam = new JPanel();
         panelHomework.add(new JLabel("Exam: "));
-        mHomeworkText = new JTextField[NUM_EXAMS];
+        mHomeworkText = new JTextField[mMain.getNumExams()];
         for(int i = 0; i < mExamText.length; i++)
         {
             mHomeworkText[i] = new JTextField(5);
