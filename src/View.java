@@ -13,13 +13,10 @@
  ************************************************************************************************/
 //package proj3; //I don't think this will work with our current working directories
 
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -42,7 +39,7 @@ public class View extends JFrame implements ActionListener {
      */
     private Main mMain;
     private JButton mClearButton;
-    private JTextField[] mExamTest;
+    private JTextField[] mExamText;
     private JButton mExitButton;
     private JTextField[] mHomeworkText;
     private JButton mSaveButton;
@@ -106,9 +103,9 @@ public class View extends JFrame implements ActionListener {
         JPanel panelHomework = new JPanel();
         panelHomework.add(new JLabel("Homework: "));
         mHomeworkText = new JTextField[NUM_HOMEWORKS];
-        for(JTextField i : mHomeworkText)
+        for(int i = 0; i < mHomeworkText.length; i++)
         {
-            mHomeworkText[i] = new JTextField(NUM_HOMEWORKS);
+            mHomeworkText[i] = new JTextField(5);
             panelHomework.add(mHomeworkText[i]);
         }
 
@@ -116,7 +113,14 @@ public class View extends JFrame implements ActionListener {
         // The pseudocode is omitted because this code is very similar to the code that creates the
         // panelHomework panel above.
         // Note: DO NOT HARDCODE THE NUMBER OF EXAMS
-        //???
+        JPanel panelExam = new JPanel();
+        panelHomework.add(new JLabel("Exam: "));
+        mHomeworkText = new JTextField[NUM_EXAMS];
+        for(int i = 0; i < mExamText.length; i++)
+        {
+            mHomeworkText[i] = new JTextField(5);
+            panelExam.add(mExamText[i]);
+        }
 
         // PSEUDOCODE:
         // Create a JPanel named panelButtons using FlowLayout
