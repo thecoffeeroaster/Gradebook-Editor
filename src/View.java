@@ -101,7 +101,7 @@ public class View extends JFrame implements ActionListener {
         //     Add mHomeworkText[i] to the panel
         // End For
         // Note: DO NOT HARDCODE THE NUMBER OF HOMEWORK ASSIGNMENTS
-        //???
+        JPanel panelHomework
 
         // Create the exam panel which contains the "Exam: " label and the two exam text fields.
         // The pseudocode is omitted because this code is very similar to the code that creates the
