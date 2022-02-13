@@ -141,7 +141,7 @@ public class Main
     {
         //args
         JFrame.setDefaultLookAndFeelDecorated(true);
-        setView(new View(this));
+        setView(new View());
         try
         {
             GradebookReader gbReader = new GradebookReader("gradebook.dat");

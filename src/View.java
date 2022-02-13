@@ -42,6 +42,18 @@ public class View extends JFrame implements ActionListener {
     public static final int FRAME_HEIGHT = 225;
 
     /**
+     * Declare GUI related instance variables for the buttons and text fields.
+     */
+    private Main mMain;
+    private JButton mClearButton;
+    private JTextField[] mExamTest;
+    private JButton mExitButton;
+    private JTextField[] mHomeworkText;
+    private JButton mSaveButton;
+    private JButton mSearchButton;
+    private JTextField mStudentName;
+
+    /**
      * When the View() ctor is called from Main.run() to create the View, run() passes a reference
      * to the Main object as the argument to View(). We save that reference into mMain and then
      * later we can use mMain to communicate with the Main class.
@@ -49,12 +61,10 @@ public class View extends JFrame implements ActionListener {
      * mMain is made accessible within this class via accessor/mutator methods getMain() and
      * setMain(). It shall not be directly accessed.
      */
-    //???
-
-    /**
-     * Declare GUI related instance variables for the buttons and text fields.
-     */
-    //???
+    public View(Main pMain)
+    {
+        this.mMain = pMain;
+    }
 
     /**
      * View()
@@ -236,7 +246,8 @@ public class View extends JFrame implements ActionListener {
     /**
      * Accessor method for mMain.
      */
-    private Main getMain() {
+    private Main getMain()
+    {
         return mMain;
     }
 
@@ -279,7 +290,8 @@ public class View extends JFrame implements ActionListener {
     /**
      * Mutator method for mMain.
      */
-    private void setMain(Main pMain) {
+    private void setMain(Main pMain)
+    {
         mMain = pMain;
     }
 
