@@ -56,7 +56,7 @@ public class Roster {
      */
     public void addStudent(Student pStudent)
     {
-        mStudentList.add(pStudent)
+        mStudentList.add(pStudent);
     }
 
     /**

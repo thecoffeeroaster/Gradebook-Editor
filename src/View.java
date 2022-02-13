@@ -30,16 +30,10 @@ import javax.swing.JTextField;
 public class View extends JFrame implements ActionListener {
 
     /**
-     * The width of the View frame. Define a private class constant.
-     *
-     * ^^^Here it says create a private class constant but in the UML it says public
+     * The width/height of the View frame. Define a private class constant.
      */
-    public static final int FRAME_WIDTH = 525;
-
-    /**
-     * The height of the View frame. Define a private class constant.
-     */
-    public static final int FRAME_HEIGHT = 225;
+    private static final int FRAME_WIDTH = 525;
+    private static final int FRAME_HEIGHT = 225;
 
     /**
      * Declare GUI related instance variables for the buttons and text fields.
@@ -74,8 +68,8 @@ public class View extends JFrame implements ActionListener {
      * @param pMain is an instance of the Main class. This links the View to the Main class so
      * they may communicate with each other.
      */
-    public View(Main pMain) {
-
+    public View(Main pMain)
+    {
         /**
          * Save a reference to the Main object pMain into instance var mMain by calling setMain().
          */
@@ -89,7 +83,14 @@ public class View extends JFrame implements ActionListener {
         // Create mSearchButton with the label "Search"
         // Make this View the action listener for the button
         // Add the button to the panel
-        //???
+        JPanel panelSearch = new JPanel();
+        panelSearch.add(new JLabel("Student Name: "));
+        mStudentName = new JTextField(25);
+        panelSearch.add(mStudentName);
+        mSearchButton = new JButton("Search");
+        mSearchButton.addActionListener(this);
+        panelSearch.add(mSearchButton);
+
 
         // PSEUDOCODE:
         // Create a JPanel named panelHomework which uses the FlowLayout
@@ -248,7 +249,7 @@ public class View extends JFrame implements ActionListener {
      */
     private Main getMain()
     {
-        return mMain;
+        return this.mMain;
     }
 
     /**
@@ -292,7 +293,7 @@ public class View extends JFrame implements ActionListener {
      */
     private void setMain(Main pMain)
     {
-        mMain = pMain;
+        this.mMain = pMain;
     }
 
 }
