@@ -28,43 +28,58 @@ import java.lang.Math;
  * public static void main (String[] args) {
  */
 public class Sorter
-//public class QuickSort
-//{
-    //public void quicksort (int[] A)
-    //{
-    //private void quicksort (int[] A, int low, int high)
-    //{
-    //private void swap (int[] A, int index1, int index2)
-    //{
-    //private int getPivot(int low, int high)
-    //{
-    //private int partition (int[] A, int low, int high)
-    //{
-
+{
     public static void sort(ArrayList<Student> pList)
     {
-        quickSort(pList, 0, pList.size() -1);
+        quickSort(pList, 0,pList.size() -1);
     }
 
-    private static int partition(ArrayList<Student> pList, int pFromIdx, int pToIdx)
+    private static int partition(ArrayList<Student> pList, int start, int end)
     {
-        //Redo in Hoare Method
+        Student p = pList.get(start);
 
+        int pFromIdx= start -1;
+        int pToIdx= end+1
 
-        return (pFromIdx + pToIdx)/2;
-    }
-
-    private static void quickSort(ArrayList<Student> pList, int pFromIdx, int pToIdx)
-    {
-        Student pvt = pList.get(partition(pList, pFromIdx, pToIdx));
-        while(pFromIdx<=pToIdx)
+        while (pFromIdx<pToIdx)
         {
+            pFromIdx++;
 
+            while (pList.get(pFromIdx).compareTo(p) < 0) {
+                pFromIdx++;
+            }
+            pToIdx--;
+
+            while (pList.get(pFromIdx).compareTo(p) > 0) {
+                pToIdx--;
+            }
+
+            if (pFromIdx < pToIdx) {
+                swap(pList, pFromIdx, pToIdx);
+            }
+        }
+
+        return pToIdx;
+    }
+
+    private static void quickSort(ArrayList<Student> pList, int start, int end)
+    {
+        if (start>= end)
+        {
+            return;
+        }
+
+        int p =partition(pList, start, end);
+            quickSort(pList, start, end);
+            quickSort(pList, p+1, end);
 
     }
 
-    private static void swap(ArrayList<Student> pList, int pIdx1, int pIdx2)
+    private static void swap(ArrayList<Student> pList, int pFromIdx, int pToIdx)
     {
-        //Call Swap inside quicksort method
+        Student temp = pList.get((pFromIdx));
+
+        pList.set(pFromIdx, pList.get(pToIdx));
+        pList.set(pToIdx, temp);
     }
 }
