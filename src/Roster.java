@@ -24,7 +24,6 @@ public class Roster {
     /**
      * Declare mStudentList as ArrayList<Student>
      */
-    //???
     private ArrayList<Student> mStudentList;
 
     /**
@@ -55,7 +54,6 @@ public class Roster {
      *     add (will append) pStudent to mStudentList
      * end method
      */
-    //???
     public void addStudent(Student pStudent)
     {
         mStudentList.add(pStudent)
@@ -131,6 +129,7 @@ public class Roster {
     {
         Sorter.sort(mStudentList);
     }
+
     /**
      * Returns a String representation of this Roster. toString() methods are very handy for
      * debugging because given access to a Roster object, say named roster, then you can print

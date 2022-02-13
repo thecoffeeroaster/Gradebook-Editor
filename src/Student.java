@@ -29,27 +29,27 @@ public class Student implements Comparable<Student> {
      * mCurrStudent is a reference to the Student object which is currently being displayed and
      * edited in the View. It should only be accessed via accessor/mutator methods.
      */
-    //???
+    private static Student mCurrStudent;
 
     /**
      * mExamList is an ArrayList of Integers storing the student's exam scores.
      */
-    //???
+    private ArrayList<Integer> mExamList;
 
     /**
      * The student's first name.
      */
-    //???
+    private String mFirstName;
 
     /**
      * mHomework List is an ArrayList of Integers storing the student's homework scores.
      */
-    //???
+    private ArrayList<Integer> mHomeworkList;
 
     /**
      * The student's last name.
      */
-    //???
+    private String mLastName;
 
     /**
      * Student()
@@ -63,7 +63,13 @@ public class Student implements Comparable<Student> {
      *     create an ArrayList<Integer> and pass it off to setHomeworkList()
      * end Student()
      */
-    //???
+    public Student(String pFirstName, String pLastName)
+    {
+        this.mFirstName = pFirstName;
+        this.mLastName = pLastName;
+        this.mExamList = setExamList(); //complete here
+        this.mHomeworkList = setHomeworkList(); //complete here
+    }
 
     /**
      * addExam()
@@ -77,7 +83,10 @@ public class Student implements Comparable<Student> {
      *     call add(pScore) on getExamList() to add a new exam score to the list of exam scores.
      * end addExam
      */
-    //???
+    public void addExam(int pScore)
+    {
+        getExamList().add(pScore);
+    }
 
     /**
      * addHomework()
@@ -92,7 +101,10 @@ public class Student implements Comparable<Student> {
      *     homework scores
      * end addHomework
      */
-    //???
+    public void addHomework(int pScore)
+    {
+        getHomeworkList().add(pScore);
+    }
 
     /**
      * compareTo()
@@ -114,12 +126,31 @@ public class Student implements Comparable<Student> {
      *     hint: the last names are Strings and String already implements compareTo().
      * end compareTo
      */
-    //???
+    @Override
+    public int compareTo(Student pStudent)
+    {
+        final int IS_SAME = 0;
+        final int IS_GREATER_THAN = 1;
+        final int IS_LESS_THAN = -1;
+        if(mLastName.compareTo(pStudent.getLastName()) == IS_SAME)
+        {
+            return IS_SAME;
+        }
+        else if(mLastName.compareTo(pStudent.getLastName()) >= IS_GREATER_THAN)
+        {
+            return IS_GREATER_THAN;
+        }
+        else
+        {
+            return IS_LESS_THAN;
+        }
+    }
 
     /**
      * Accessor method for mCurrStudent.
      */
-    public static Student getCurrStudent() {
+    public static Student getCurrStudent()
+    {
         return mCurrStudent;
     }
 
@@ -132,7 +163,8 @@ public class Student implements Comparable<Student> {
      *
      * @return The exam score.
      */
-    public int getExam(int pNum) {
+    public int getExam(int pNum)
+    {
         return getExamList().get(pNum);
     }
 
@@ -141,7 +173,8 @@ public class Student implements Comparable<Student> {
      *
      * Accessor method for mExamList.
      */
-    private ArrayList<Integer> getExamList() {
+    private ArrayList<Integer> getExamList()
+    {
         return mExamList;
     }
 
@@ -150,7 +183,8 @@ public class Student implements Comparable<Student> {
      *
      * Accessor method for mFirstName.
      */
-    public String getFirstName() {
+    public String getFirstName()
+    {
         return mFirstName;
     }
 
@@ -170,7 +204,8 @@ public class Student implements Comparable<Student> {
      *
      * @return The homework score.
      */
-    public int getHomework(int pNum) {
+    public int getHomework(int pNum)
+    {
         return getHomeworkList().get(pNum);
     }
 
@@ -179,7 +214,8 @@ public class Student implements Comparable<Student> {
      *
      * Accessor method for mHomeworkList.
      */
-    private ArrayList<Integer> getHomeworkList() {
+    private ArrayList<Integer> getHomeworkList()
+    {
         return mHomeworkList;
     }
 
@@ -188,14 +224,16 @@ public class Student implements Comparable<Student> {
      *
      * Accessor method for mLastName.
      */
-    public String getLastName() {
+    public String getLastName()
+    {
         return mLastName;
     }
 
     /**
      * Mutator method for mCurrStudent.
      */
-    public static void setCurrStudent(Student pCurrStudent) {
+    public static void setCurrStudent(Student pCurrStudent)
+    {
         mCurrStudent = pCurrStudent;
     }
 
@@ -206,7 +244,8 @@ public class Student implements Comparable<Student> {
      *
      * @pNum is the index into the list of exams, where 0 is the index of the first exam score.
      */
-    public void setExam(int pNum, int pScore) {
+    public void setExam(int pNum, int pScore)
+    {
         getExamList().set(pNum, pScore);
     }
 
@@ -215,7 +254,8 @@ public class Student implements Comparable<Student> {
      *
      * Mutator method for mExamList.
      */
-    private void setExamList(ArrayList<Integer> pExamList) {
+    private void setExamList(ArrayList<Integer> pExamList)
+    {
         mExamList = pExamList;
     }
 
@@ -224,7 +264,8 @@ public class Student implements Comparable<Student> {
      *
      * Mutator method for mFirstName.
      */
-    public void setFirstName(String pFirstName) {
+    public void setFirstName(String pFirstName)
+    {
         mFirstName = pFirstName;
     }
 
@@ -236,7 +277,8 @@ public class Student implements Comparable<Student> {
      *
      * @pNum is the index into the list of homeworks, where 0 is the index of the first hw score.
      */
-    public void setHomework(int pNum, int pScore) {
+    public void setHomework(int pNum, int pScore)
+    {
         getHomeworkList().set(pNum, pScore);
     }
 
@@ -245,7 +287,8 @@ public class Student implements Comparable<Student> {
      *
      * Mutator method for mHomeworkList.
      */
-    private void setHomeworkList(ArrayList<Integer> pHomeworkList) {
+    private void setHomeworkList(ArrayList<Integer> pHomeworkList)
+    {
         mHomeworkList = pHomeworkList;
     }
 
@@ -254,7 +297,8 @@ public class Student implements Comparable<Student> {
      *
      * Mutator method for mLastName.
      */
-    public void setLastName(String pLastName) {
+    public void setLastName(String pLastName)
+    {
         mLastName = pLastName;
     }
 
