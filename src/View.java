@@ -150,7 +150,8 @@ public class View extends JFrame implements ActionListener {
         // button in the title bar of the View so now the only way to exit the program is by click-
         // ing the Exit button. This ensures that Main.exit() will be called so it will write the
         // student records back out to the gradebook database.
-        //???
+
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 
         // Add panelMain to the View.
         add(panelMain);
@@ -158,7 +159,7 @@ public class View extends JFrame implements ActionListener {
         // If you are a Mac user, you may need to call the pack() method which is inherited from
         // java.awt.Window() now to pack the View before displaying it. Windows and Linux users do
         // not need to do this, although if you do, it will not cause any problems.
-        // //???
+        pack();
 
         // Now display the View by calling setVisible().
         setVisible(true);
