@@ -43,17 +43,18 @@ public class Sorter
 
     public static void sort(ArrayList<Student> pList)
     {
-        //args
+        quickSort(pList, 0, pList.size() -1);
     }
 
     private static int partition(ArrayList<Student> pList, int pFromIdx, int pToIdx)
     {
-        //args
+        return (pFromIdx + pToIdx)/2;
     }
 
-    private static void quickSort(ArrayList<Student> pList, int pFromIdx, int pToId)
+    private static void quickSort(ArrayList<Student> pList, int pFromIdx, int pToIdx)
     {
-        //args
+        int i =pFromIdx, j =pToIdx;
+        Student pvt = pList.get(partition(pList, pFromIdx, pToIdx));
     }
 
     private static void swap(ArrayList<Student> pList, int pIdx1, int pIdx2)
