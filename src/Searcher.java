@@ -12,7 +12,31 @@
  *        | Sean Loehr, ASU ID: 1222435526, smloehr@asu.edu
  ************************************************************************************************/
 
+import java.util.ArrayList;
+
 public class Searcher //Josh is going to complete
 {
-    //args
+    public static int search(ArrayList<Student> pList, String pKey)
+    {
+        int low = 0;
+        int high = pList.size() - 1;
+        while(low <= high)
+        {
+            int middle = (low + high) / 2;
+
+            if(pKey == pList.get(middle))
+            {
+                return middle;
+            }
+            else if(pKey < pList.get(middle))
+            {
+                high = middle -1;
+            }
+            else
+            {
+                low = middle + 1;
+            }
+        }
+        return -1;
+    }
 }
