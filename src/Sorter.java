@@ -39,7 +39,7 @@ public class Sorter
         Student p = pList.get(start);
 
         int pFromIdx= start -1;
-        int pToIdx= end+1
+        int pToIdx= end+1;
 
         while (pFromIdx<pToIdx)
         {
@@ -68,11 +68,10 @@ public class Sorter
         {
             return;
         }
-
         int p =partition(pList, start, end);
-            quickSort(pList, start, end);
-            quickSort(pList, p+1, end);
 
+        quickSort(pList, start, end);
+        quickSort(pList, p+1, end);
     }
 
     private static void swap(ArrayList<Student> pList, int pFromIdx, int pToIdx)
