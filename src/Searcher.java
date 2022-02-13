@@ -24,10 +24,7 @@ public class Searcher //Josh is going to complete
             {
                 return i;
             }
-            else
-            {
-                return -1;
-            }
         }
+        return -1;
     }
 }
