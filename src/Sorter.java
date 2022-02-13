@@ -49,4 +49,9 @@ public class Sorter
     {
         //args
     }
+
+    private static void quickSort(ArrayList<Student> pList, int pFromIdx, int pToId)
+    {
+        //args
+    }
 }
