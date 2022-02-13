@@ -1,5 +1,6 @@
 import java.util.ArrayList;
-
+import java.util.Comparator;
+import java.util.Collections;
 /************************************************************************************************
  * CLASS: Sorter (Sorter.java)
  *
@@ -14,10 +15,9 @@ import java.util.ArrayList;
  *        | Sean Loehr, ASU ID: 1222435526, smloehr@asu.edu
  ************************************************************************************************/
 
-public class Sorter //Sean is going to complete
+public class Sorter
 {
-    public static void sort(ArrayList<Student> mStudentList)
-    {
-        //args
+    public static ArrayList<Student> sort(ArrayList<Student> mStudentList) {
     }
+    //args
 }
