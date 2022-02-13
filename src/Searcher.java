@@ -18,25 +18,16 @@ public class Searcher //Josh is going to complete
 {
     public static int search(ArrayList<Student> pList, String pKey)
     {
-        int low = 0;
-        int high = pList.size() - 1;
-        while(low <= high)
+        for(int i = 0; i < pList.size(); i++)
         {
-            int middle = (low + high) / 2;
-
-            if(pKey == pList.get(middle))
+            if(pKey.equals(pList.get(i).getLastName()))
             {
-                return middle;
-            }
-            else if(pKey < pList.get(middle))
-            {
-                high = middle -1;
+                return i;
             }
             else
             {
-                low = middle + 1;
+                return -1;
             }
         }
-        return -1;
     }
 }

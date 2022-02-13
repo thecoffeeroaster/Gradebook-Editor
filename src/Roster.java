@@ -80,10 +80,12 @@ public class Roster {
     public Student getStudent(String pLastName)
     {
         int index = Searcher.search(getStudentList(), pLastName);
-        if (index ==-1)
+        if (index == -1)
         {
             return null;
-        }else{
+        }
+        else
+        {
             return mStudentList.get(index);
         }
     }
