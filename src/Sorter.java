@@ -40,7 +40,12 @@ public class Sorter
     //private int partition (int[] A, int low, int high)
     //{
 
-    public static ArrayList<Student> sort(ArrayList<Student> mStudentList) {
+    public static void sort(ArrayList<Student> pList) {
     }
     //args
+
+    private static void swap(ArrayList<Student> pList, int pIdx1, int pIdx2)
+    {
+        //args
+    }
 }
