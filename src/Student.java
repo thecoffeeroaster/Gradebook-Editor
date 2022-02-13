@@ -320,5 +320,19 @@ public class Student implements Comparable<Student> {
      *
      * Hint: use enhanced for loops
      */
-    //???
+    @Override
+    public String toString()
+    {
+        String output = mLastName + " " + mFirstName + " ";
+        for(Integer i : mExamList)
+        {
+            output += mExamList.get(i) + " ";
+        }
+        for(Integer i : mHomeworkList)
+        {
+            output += mHomeworkList.get(i) + " ";
+        }
+        output = output.trim();
+        return output;
+    }
 }
