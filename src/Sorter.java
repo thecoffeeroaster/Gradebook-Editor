@@ -53,8 +53,11 @@ public class Sorter
 
     private static void quickSort(ArrayList<Student> pList, int pFromIdx, int pToIdx)
     {
-        int i =pFromIdx, j =pToIdx;
         Student pvt = pList.get(partition(pList, pFromIdx, pToIdx));
+        while(pFromIdx<=pToIdx)
+        {
+
+
     }
 
     private static void swap(ArrayList<Student> pList, int pIdx1, int pIdx2)
