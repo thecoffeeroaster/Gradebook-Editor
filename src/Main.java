@@ -37,7 +37,7 @@ public class Main
     /**
      * This is where execution starts. Instantiate a Main object and then call run().
      */
-    public void main(String[] pArgs)
+    public static void main(String[] pArgs)
     {
         Main main = new Main();
         main.run();
