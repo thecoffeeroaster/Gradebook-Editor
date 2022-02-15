@@ -49,7 +49,7 @@ public class GradebookWriter extends PrintWriter {
      */
     public void writeGradebook(Roster pRoster)
     {
-        for(Student student : pRoster)
+        for(Student student : pRoster.getStudentList())
         {
             println(student);
         }
