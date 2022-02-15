@@ -13,6 +13,7 @@
  ************************************************************************************************/
 //package proj3; //I don't think this will work with our current working directories
 
+import java.awt.*;
 import java.awt.event.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -352,7 +353,10 @@ public class View extends JFrame implements ActionListener {
      *     Call JOptionPane.showMessageDialog() to display pMessage.
      * end messageBox
      */
-    //???
+    public void messageBox(String pMessage)
+    {
+        JOptionPane.showMessageDialog(this, pMessage, "Error", JOptionPane.ERROR_MESSAGE);
+    }
 
     /**
      * saveStudent()
