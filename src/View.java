@@ -281,7 +281,13 @@ public class View extends JFrame implements ActionListener {
      *     Set the current Student object in the Student class to null
      * end clear
      */
-    //???
+    private void clear()
+    {
+        mStudentName.setText("");
+        clearNumbers();
+        Student.setCurrStudent(null);
+    }
+
 
     /**
      * clearNumbers()
@@ -290,7 +296,17 @@ public class View extends JFrame implements ActionListener {
      *
      * DO NOT HARCODE THE NUMBER OF HOMEWORKS AND EXAMS
      */
-    //???
+    private void clearNumbers()
+    {
+        for (JTextField jtf : mHomeworkText)
+        {
+            jtf.setText("");
+        }
+        for (JTextField jtf : mExamText)
+        {
+            jtf.setText("");
+        }
+    }
 
     /**
      * displayStudent()
