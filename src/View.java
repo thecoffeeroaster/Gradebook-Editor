@@ -112,7 +112,7 @@ public class View extends JFrame implements ActionListener {
         // Note: DO NOT HARDCODE THE NUMBER OF EXAMS
         JPanel panelExam = new JPanel();
         panelExam.add(new JLabel("Exam: "));
-        mHomeworkText = new JTextField[mMain.getNumExams()];
+        mExamText = new JTextField[mMain.getNumExams()];
         for(int i = 0; i < mExamText.length; i++)
         {
             mHomeworkText[i] = new JTextField(5);
