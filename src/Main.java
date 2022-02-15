@@ -76,7 +76,8 @@ public class Main
         }
         catch(FileNotFoundException fnfe)
         {
-            //Josh stopped here
+            getView().messageBox("Could not open \"gradebook.dat\" for writing. Exiting without saving...");
+            System.exit(-1);
         }
     }
 
@@ -170,7 +171,7 @@ public class Main
      */
     public Student search(String pLastName)
     {
-        //Josh stopped here
+        return getRoster().getStudent(pLastName);
     }
 
     /**
