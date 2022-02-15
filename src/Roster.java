@@ -84,7 +84,7 @@ public class Roster {
         }
         else
         {
-            return mStudentList.get(index);
+            return getStudentList().get(index);
         }
     }
 
