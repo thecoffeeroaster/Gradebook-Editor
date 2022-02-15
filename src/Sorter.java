@@ -39,37 +39,39 @@ public class Sorter
         int pFromIdx= start -1;
         int pToIdx= end+1;
 
-        while (pFromIdx<pToIdx);
+        while(pFromIdx < pToIdx)
         {
             pFromIdx++;
 
-            while (pList.get(pFromIdx).compareTo(p) < 0) {
+            while (pList.get(pFromIdx).compareTo(p) < 0)
+            {
                 pFromIdx++;
             }
             pToIdx--;
 
-            while (pList.get(pFromIdx).compareTo(p) > 0) {
+            while (pList.get(pFromIdx).compareTo(p) > 0)
+            {
                 pToIdx--;
             }
 
-            if (pFromIdx < pToIdx) {
+            if (pFromIdx < pToIdx)
+            {
                 swap(pList, pFromIdx, pToIdx);
             }
         }
-
         return pToIdx;
     }
 
     private static void quickSort(ArrayList<Student> pList, int start, int end)
     {
-        if (start>= end)
+        if (start >= end)
         {
             return;
         }
         int p =partition(pList, start, end);
 
         quickSort(pList, start, end);
-        quickSort(pList, p+1, end);
+        quickSort(pList, p + 1, end);
     }
 
     private static void swap(ArrayList<Student> pList, int pFromIdx, int pToIdx)
