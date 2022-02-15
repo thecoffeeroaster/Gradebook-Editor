@@ -50,10 +50,10 @@ public class View extends JFrame implements ActionListener {
      * mMain is made accessible within this class via accessor/mutator methods getMain() and
      * setMain(). It shall not be directly accessed.
      */
-    public View(Main pMain)
-    {
-        this.mMain = pMain;
-    }
+//    public View(Main pMain)
+//    {
+//        this.mMain = pMain;
+//    }
 
     /**
      * View()
@@ -225,19 +225,43 @@ public class View extends JFrame implements ActionListener {
     {
         if(pEvent.getSource() == mSearchButton)
         {
-            // whatever happens when Search button is pressed
+            clear();
+            String lastName = mStudentName.getText();
+            if(lastName.isEmpty())
+            {
+                messageBox("Please enter the student's last name.");
+            }
+            else
+            {
+                Student.setCurrStudent(getMain().search(lastName));
+                if(Student.getCurrStudent() == null)
+                {
+                    messageBox("Student not found. Try again.");
+                }
+                else
+                {
+                    displayStudent(Student.getCurrStudent());
+                }
+            }
         }
         else if(pEvent.getSource() == mSaveButton)
         {
-            // whatever happens when the save button is pressed
+            if(Student.getCurrStudent() != null)
+            {
+                saveStudent(Student.getCurrStudent());
+            }
         }
         else if(pEvent.getSource() == mClearButton)
         {
-            // whatever happens when the clear button is pressed
+            clear();
         }
         else if(pEvent.getSource() == mExitButton)
         {
-            // whatever happens when the exit button is pressed
+            if(Student.getCurrStudent() != null)
+            {
+                saveStudent(Student.getCurrStudent());
+                getMain().exit();
+            }
         }
     }
 
