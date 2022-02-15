@@ -390,7 +390,21 @@ public class View extends JFrame implements ActionListener {
      *
      * DO NOT HARDCODE THE NUMBER OF HOMEWORKS AND EXAMS
      */
-    //???
+    private void saveStudent(Student pStudent)
+        {
+            for (int i = 0; i<Main.getNumHomeworks(); i++)
+            {
+                String hwstr = mHomeworkText[i].getText();
+                int hw = Integer.parseInt(hwstr);
+                pStudent.setHomework(i, hw);
+            }
+            for (int i = 0; i<Main.getNumExams(); i++)
+            {
+                String examstr = mExamText[i].getText();
+                int exam = Integer.parseInt(examstr);
+                pStudent.setHomework(i, exam);
+            }
+        }
 
     /**
      * Mutator method for mMain.
