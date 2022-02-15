@@ -136,9 +136,11 @@ public class Roster {
      * the entire roster in one statement: System.out.println(roster);
      */
     @Override
-    public String toString() {
+    public String toString()
+    {
         String result = "";
-        for (Student student : getStudentList()) {
+        for (Student student : getStudentList())
+        {
             result += student + "\n";
         }
         return result;
