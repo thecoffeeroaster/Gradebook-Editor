@@ -21,8 +21,8 @@ import javax.swing.JFrame;
  */
 public class Main
 {
-    private final int NUM_EXAMS = 3;
-    private final int NUM_HOMEWORKS = 5;
+    private static final int NUM_EXAMS = 3;
+    private static final int NUM_HOMEWORKS = 5;
 
     /**
      * The Roster of students that is read from the input file "gradebook.dat".
@@ -86,7 +86,7 @@ public class Main
      */
     public static int getNumExams()
     {
-        //args
+        return NUM_EXAMS;
     }
 
     /**
@@ -94,7 +94,7 @@ public class Main
      */
     public static int getNumHomeworks()
     {
-        //args
+        return NUM_HOMEWORKS;
     }
 
     /**
