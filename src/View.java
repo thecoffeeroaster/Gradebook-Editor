@@ -147,7 +147,7 @@ public class View extends JFrame implements ActionListener {
         // Add panelExam to panelMain
         // Add panelButtons to panelMain
         JPanel panelMain = new JPanel();
-        panelMain.setLayout(new BoxLayout(this, BoxLayout.X_AXIS);
+        panelMain.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
         panelMain.add(panelSearch);
         panelMain.add(panelHomework);
         panelMain.add(panelExam);
