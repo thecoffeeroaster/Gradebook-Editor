@@ -40,8 +40,8 @@ public class Roster {
      */
     public Roster ()
     {
-        mStudentList = new ArrayList<>();
-        setStudentList(mStudentList);
+        ArrayList<Student> studentList = new ArrayList<>();
+        setStudentList(studentList);
     }
 
     /**
