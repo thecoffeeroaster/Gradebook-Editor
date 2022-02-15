@@ -78,12 +78,13 @@ public class View extends JFrame implements ActionListener {
         // Create mSearchButton with the label "Search"
         // Make this View the action listener for the button
         // Add the button to the panel
+        ActionListener listener = this;
         JPanel panelSearch = new JPanel();
         panelSearch.add(new JLabel("Student Name: "));
         mStudentName = new JTextField(25);
         panelSearch.add(mStudentName);
         mSearchButton = new JButton("Search");
-        mSearchButton.addActionListener(this);
+        mSearchButton.addActionListener(listener);
         panelSearch.add(mSearchButton);
 
 
@@ -128,15 +129,15 @@ public class View extends JFrame implements ActionListener {
         JPanel panelButtons = new JPanel();
 
         mClearButton = new JButton("Clear");
-        mClearButton.addActionListener(this);
+        mClearButton.addActionListener(listener);
         panelButtons.add(mClearButton);
 
         mSaveButton = new JButton("Save");
-        mSaveButton.addActionListener(this);
+        mSaveButton.addActionListener(listener);
         panelButtons.add(mSaveButton);
 
         mExitButton = new JButton("Exit");
-        mExitButton.addActionListener(this);
+        mExitButton.addActionListener(listener);
         panelButtons.add(mExitButton);
 
         // PSEUDOCODE:
@@ -330,17 +331,17 @@ public class View extends JFrame implements ActionListener {
      */
     private void displayStudent(Student pStudent)
     {
-        for(int i = 0; i <Main.getNumHomeworks(); i++)
+        for(int i = 0; i < getMain().getNumHomeworks(); i++)
         {
             int hw = pStudent.getHomework(i);
-            String hwstr = String.valueOf(hw);
+            String hwstr = Integer.toString(hw);
             mHomeworkText[i].setText(hwstr);
         }
 
-        for(int i = 0; i <Main.getNumExams(); i++)
+        for(int i = 0; i < getMain().getNumExams(); i++)
         {
             int exam = pStudent.getExam(i);
-            String examstr = String.valueOf(exam);
+            String examstr = Integer.toString(exam);
             mHomeworkText[i].setText(examstr);
         }
     }
@@ -369,8 +370,7 @@ public class View extends JFrame implements ActionListener {
      */
     public void messageBox(String pMessage)
     {
-        Canvas canvas = new Canvas();
-        JOptionPane.showMessageDialog(canvas, pMessage, "Error", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(getRootPane(), pMessage, "Error", JOptionPane.ERROR_MESSAGE);
     }
 
     /**
