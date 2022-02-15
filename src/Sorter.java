@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.lang.Math;
 /************************************************************************************************
  * CLASS: Sorter (Sorter.java)
  *
@@ -29,56 +30,54 @@ public class Sorter
 {
     public static void sort(ArrayList<Student> pList)
     {
-        quickSort(pList, 0,pList.size() -1);
+        quickSort(pList, 0,pList.size() - 1);
     }
 
-    private static int partition(ArrayList<Student> pList, int start, int end)
+    private static int partition(ArrayList<Student> pList, int pFromIndex, int pToIndex)
     {
-        Student p = pList.get(start);
+        int pivot = pFromIndex + ((int) (Math.random() * pToIndex));
 
-        int pFromIdx= start -1;
-        int pToIdx= end+1;
+        int leftPointerSlider = pFromIndex - 1; // Starts on the left side and moves up the list
+        int rightPointerSlider = pToIndex + 1; // Starts on the right side and moves down the list
 
-        while(pFromIdx < pToIdx)
+        while(leftPointerSlider < rightPointerSlider)
         {
-            pFromIdx++;
-
-            while (pList.get(pFromIdx).compareTo(p) < 0)
+            leftPointerSlider ++;
+            while(pList.get(leftPointerSlider).getLastName().compareTo(pList.get(pivot).getLastName()) < 0)
             {
-                pFromIdx++;
-            }
-            pToIdx--;
-
-            while (pList.get(pFromIdx).compareTo(p) > 0)
-            {
-                pToIdx--;
+                leftPointerSlider ++;
             }
 
-            if (pFromIdx < pToIdx)
+            rightPointerSlider --;
+            while(pList.get(rightPointerSlider).getLastName().compareTo(pList.get(pivot).getLastName()) > 0)
             {
-                swap(pList, pFromIdx, pToIdx);
+                rightPointerSlider --;
+            }
+            if(leftPointerSlider < rightPointerSlider)
+            {
+                swap(pList, leftPointerSlider, rightPointerSlider);
             }
         }
-        return pToIdx;
+        return pivot; //???
     }
 
     private static void quickSort(ArrayList<Student> pList, int start, int end)
     {
-        if (start >= end)
+        if (start >= end || end < 0)
         {
             return;
         }
-        int p =partition(pList, start, end);
+        int p = partition(pList, start, end);
 
-        quickSort(pList, start, end);
+        quickSort(pList, start, p - 1);
         quickSort(pList, p + 1, end);
     }
 
-    private static void swap(ArrayList<Student> pList, int pFromIdx, int pToIdx)
+    private static void swap(ArrayList<Student> pList, int pFromIndex, int pToIndex)
     {
-        Student temp = pList.get((pFromIdx));
+        Student temp = pList.get((pFromIndex));
 
-        pList.set(pFromIdx, pList.get(pToIdx));
-        pList.set(pToIdx, temp);
+        pList.set(pFromIndex, pList.get(pToIndex));
+        pList.set(pToIndex, temp);
     }
 }
