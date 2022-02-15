@@ -329,7 +329,21 @@ public class View extends JFrame implements ActionListener {
      *
      * DO NOT HARCODE THE NUMBER OF HOMEWORKS AND EXAMS
      */
-    //???
+    private void displayStudent(Student pStudent)
+    {
+        for(int i = 0; i <Main.getNumHomeworks(); i++)
+        {
+            int hw = pStudent.getHomework(i);
+            String hwstr = String.valueOf(hw);
+            mHomeworkText[i].setText(hwstr);
+        }
+
+        for(int i = 0; i <Main.getNumExams(); i++)
+        {
+            int exam = pStudent.getExam(i);
+            String examstr = String.valueOf(exam);
+            mHomeworkText[i].setText(examstr);
+    }
 
     /**
      * Accessor method for mMain.
