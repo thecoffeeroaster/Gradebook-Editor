@@ -343,6 +343,7 @@ public class View extends JFrame implements ActionListener {
             int exam = pStudent.getExam(i);
             String examstr = String.valueOf(exam);
             mHomeworkText[i].setText(examstr);
+        }
     }
 
     /**
@@ -350,7 +351,7 @@ public class View extends JFrame implements ActionListener {
      */
     private Main getMain()
     {
-        return this.mMain;
+        return mMain;
     }
 
     /**
@@ -391,20 +392,20 @@ public class View extends JFrame implements ActionListener {
      * DO NOT HARDCODE THE NUMBER OF HOMEWORKS AND EXAMS
      */
     private void saveStudent(Student pStudent)
+    {
+        for (int i = 0; i<Main.getNumHomeworks(); i++)
         {
-            for (int i = 0; i<Main.getNumHomeworks(); i++)
-            {
-                String hwstr = mHomeworkText[i].getText();
-                int hw = Integer.parseInt(hwstr);
-                pStudent.setHomework(i, hw);
-            }
-            for (int i = 0; i<Main.getNumExams(); i++)
-            {
-                String examstr = mExamText[i].getText();
-                int exam = Integer.parseInt(examstr);
-                pStudent.setHomework(i, exam);
-            }
+            String hwstr = mHomeworkText[i].getText();
+            int hw = Integer.parseInt(hwstr);
+            pStudent.setHomework(i, hw);
         }
+        for (int i = 0; i<Main.getNumExams(); i++)
+        {
+            String examstr = mExamText[i].getText();
+            int exam = Integer.parseInt(examstr);
+            pStudent.setHomework(i, exam);
+        }
+    }
 
     /**
      * Mutator method for mMain.
