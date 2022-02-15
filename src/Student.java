@@ -67,8 +67,8 @@ public class Student implements Comparable<Student> {
     {
         this.mFirstName = pFirstName;
         this.mLastName = pLastName;
-        this.mExamList = setExamList(); //complete here
-        this.mHomeworkList = setHomeworkList(); //complete here
+        setExamList(new ArrayList<Integer>()); //complete here
+        setHomeworkList(new ArrayList<Integer>()); //complete here
     }
 
     /**
