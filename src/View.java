@@ -14,7 +14,6 @@
 //package proj3; //I don't think this will work with our current working directories
 
 import java.awt.*;
-import java.awt.event.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -147,7 +146,7 @@ public class View extends JFrame implements ActionListener {
         // Add panelExam to panelMain
         // Add panelButtons to panelMain
         JPanel panelMain = new JPanel();
-        panelMain.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
+        panelMain.setLayout(new BoxLayout(panelMain, BoxLayout.Y_AXIS));
         panelMain.add(panelSearch);
         panelMain.add(panelHomework);
         panelMain.add(panelExam);
