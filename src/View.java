@@ -13,7 +13,6 @@
  ************************************************************************************************/
 //package proj3; //I don't think this will work with our current working directories
 
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -99,7 +98,7 @@ public class View extends JFrame implements ActionListener {
         // Note: DO NOT HARDCODE THE NUMBER OF HOMEWORK ASSIGNMENTS
         JPanel panelHomework = new JPanel();
         panelHomework.add(new JLabel("Homework: "));
-        mHomeworkText = new JTextField[mMain.getNumHomeworks()];
+        mHomeworkText = new JTextField[getMain().getNumHomeworks()];
         for(int i = 0; i < mHomeworkText.length; i++)
         {
             mHomeworkText[i] = new JTextField(5);
@@ -112,7 +111,7 @@ public class View extends JFrame implements ActionListener {
         // Note: DO NOT HARDCODE THE NUMBER OF EXAMS
         JPanel panelExam = new JPanel();
         panelExam.add(new JLabel("Exam: "));
-        mExamText = new JTextField[mMain.getNumExams()];
+        mExamText = new JTextField[getMain().getNumExams()];
         for(int i = 0; i < mExamText.length; i++)
         {
             mExamText[i] = new JTextField(5);
@@ -226,7 +225,7 @@ public class View extends JFrame implements ActionListener {
     {
         if(pEvent.getSource() == mSearchButton)
         {
-            clear();
+            clearNumbers();
             String lastName = mStudentName.getText();
             if(lastName.isEmpty())
             {

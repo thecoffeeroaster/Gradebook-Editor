@@ -147,8 +147,8 @@ public class Main
         try
         {
             GradebookReader gbReader = new GradebookReader("gradebook.dat");
-            this.mRoster = gbReader.readGradebook();
-            setRoster(this.mRoster);
+            mRoster = gbReader.readGradebook();
+            setRoster(mRoster);
         }
         catch(FileNotFoundException fnfe)
         {

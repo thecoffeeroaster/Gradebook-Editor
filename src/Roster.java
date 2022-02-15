@@ -19,8 +19,8 @@ import java.util.ArrayList;
  * The Roster class encapsulates an ArrayList<Student> object named mStudentList which stores the
  * information for each student that was read from "gradebook.txt" when the app started.
  */
-public class Roster {
-
+public class Roster
+{
     /**
      * Declare mStudentList as ArrayList<Student>
      */
@@ -100,7 +100,8 @@ public class Roster {
      *
      * If you are so inclinded, by all means, implement the iterator.
      */
-    public ArrayList<Student> getStudentList() {
+    public ArrayList<Student> getStudentList()
+    {
         return mStudentList;
     }
 
@@ -109,7 +110,8 @@ public class Roster {
      *
      * Mutator method for mStudentList.
      */
-    private void setStudentList(ArrayList<Student> pStudentList) {
+    private void setStudentList(ArrayList<Student> pStudentList)
+    {
         mStudentList = pStudentList;
     }
 
