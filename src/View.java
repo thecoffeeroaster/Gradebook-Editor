@@ -13,7 +13,8 @@
  ************************************************************************************************/
 //package proj3; //I don't think this will work with our current working directories
 
-import java.awt.*;
+import java.awt.event.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
@@ -219,7 +220,26 @@ public class View extends JFrame implements ActionListener {
      * End If
      * end actionPerformed
      */
-    //???
+    @Override
+    public void actionPerformed(ActionEvent pEvent)
+    {
+        if(pEvent.getSource() == mSearchButton)
+        {
+            // whatever happens when Search button is pressed
+        }
+        else if(pEvent.getSource() == mSaveButton)
+        {
+            // whatever happens when the save button is pressed
+        }
+        else if(pEvent.getSource() == mClearButton)
+        {
+            // whatever happens when the clear button is pressed
+        }
+        else if(pEvent.getSource() == mExitButton)
+        {
+            // whatever happens when the exit button is pressed
+        }
+    }
 
     /**
      * clear()
