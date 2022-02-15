@@ -115,7 +115,7 @@ public class View extends JFrame implements ActionListener {
         mExamText = new JTextField[mMain.getNumExams()];
         for(int i = 0; i < mExamText.length; i++)
         {
-            mHomeworkText[i] = new JTextField(5);
+            mExamText[i] = new JTextField(5);
             panelExam.add(mExamText[i]);
         }
 
@@ -370,7 +370,8 @@ public class View extends JFrame implements ActionListener {
      */
     public void messageBox(String pMessage)
     {
-        JOptionPane.showMessageDialog(this, pMessage, "Error", JOptionPane.ERROR_MESSAGE);
+        Canvas canvas = new Canvas();
+        JOptionPane.showMessageDialog(canvas, pMessage, "Error", JOptionPane.ERROR_MESSAGE);
     }
 
     /**
