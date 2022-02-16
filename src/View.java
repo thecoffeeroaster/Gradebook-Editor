@@ -49,10 +49,6 @@ public class View extends JFrame implements ActionListener {
      * mMain is made accessible within this class via accessor/mutator methods getMain() and
      * setMain(). It shall not be directly accessed.
      */
-//    public View(Main pMain)
-//    {
-//        this.mMain = pMain;
-//    }
 
     /**
      * View()
@@ -153,7 +149,7 @@ public class View extends JFrame implements ActionListener {
         panelMain.add(panelButtons);
 
         // Set the title of the View to whatever you want by calling setTitle()
-        setTitle("Grade_ed :: Gradebook Editor");
+        setTitle("Hardest Project Ever | Edit your fake grades here!");
 
         // Set the size of the View to FRAME_WIDTH x FRAME_HEIGHT
         setSize(FRAME_WIDTH, FRAME_HEIGHT);
@@ -225,7 +221,6 @@ public class View extends JFrame implements ActionListener {
     {
         if(pEvent.getSource() == mSearchButton)
         {
-            System.out.println("SEARCH BUTTON WAS PRESSED");
             clearNumbers();
             String lastName = mStudentName.getText();
             if(lastName.isEmpty())
@@ -247,26 +242,22 @@ public class View extends JFrame implements ActionListener {
         }
         else if(pEvent.getSource() == mSaveButton)
         {
-            System.out.println("SAVE BUTTON WAS PRESSED");
             if(Student.getCurrStudent() != null)
             {
                 saveStudent(Student.getCurrStudent());
-                System.out.println(Student.getCurrStudent().toString());
             }
         }
         else if(pEvent.getSource() == mClearButton)
         {
-            System.out.println("CLEAR BUTTON WAS PRESSED");
             clear();
         }
         else if(pEvent.getSource() == mExitButton)
         {
-            System.out.println("EXIT BUTTON WAS PRESSED");
             if(Student.getCurrStudent() != null)
             {
                 saveStudent(Student.getCurrStudent());
-                getMain().exit();
             }
+            getMain().exit();
         }
     }
 

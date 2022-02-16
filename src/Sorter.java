@@ -17,6 +17,10 @@ import java.lang.Math;
 
 public class Sorter
 {
+    /**
+     * A kind of wrapper
+     * @param pList
+     */
     public static void sort(ArrayList<Student> pList)
     {
         quickSort(pList, 0,pList.size() - 1);
@@ -24,7 +28,6 @@ public class Sorter
 
     private static int partition(ArrayList<Student> pList, int pFromIndex, int pToIndex)
     {
-        //int pivot = pFromIndex + ((int) (Math.random() * pToIndex));
         int pivot = pFromIndex;
 
         int leftPointerSlider = pFromIndex - 1; // Starts on the left side and moves up the list
