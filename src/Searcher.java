@@ -13,6 +13,19 @@
  ************************************************************************************************/
 import java.util.ArrayList;
 
+
+
+
+// * This is the iterative binary search algorithm for the searching class.
+// *
+// * @param pList ArrayList<Student>
+// * @param pFromIndex int
+// * @param pToIndex int
+// * @return -1
+//
+
+
+
 public class Searcher {
     public static int search(ArrayList<Student> pList, String pKey)
     {
@@ -21,7 +34,7 @@ public class Searcher {
         while (pLow < pHigh)
         {
             int pMiddle = (pLow + pHigh) / 2;
-            int compare = pKey.compareToIgnoreCase((pList.get(pMiddle).getLastName));
+            int compare = pKey.compareToIgnoreCase(pList.get(pMiddle).getLastName());
             if (compare == 0) {
                 return pMiddle;
             } else if (compare < 0) {
@@ -46,4 +59,3 @@ public class Searcher {
 //        }
 //        return -1;
 //    }
-}
