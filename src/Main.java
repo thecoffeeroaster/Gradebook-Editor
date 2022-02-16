@@ -11,7 +11,6 @@
  * AUTHORS: Joshua McKenzie, ASU ID: 1209056897, jsmckenz@asu.edu
  *        | Sean Loehr, ASU ID: 1222435526, smloehr@asu.edu
  ************************************************************************************************/
-//package proj3; //I don't think this will work with our current working directories
 
 import java.io.FileNotFoundException;
 import javax.swing.JFrame;
