@@ -11,20 +11,39 @@
  * AUTHORS: Joshua McKenzie, ASU ID: 1209056897, jsmckenz@asu.edu
  *        | Sean Loehr, ASU ID: 1222435526, smloehr@asu.edu
  ************************************************************************************************/
-
 import java.util.ArrayList;
 
-public class Searcher
-{
+public class Searcher {
     public static int search(ArrayList<Student> pList, String pKey)
     {
-        for(int i = 0; i < pList.size(); i++)
+        int pLow = 0;
+        int pHigh = pList.size() - 1;
+        while (pLow < pHigh)
         {
-            if(pKey.equals(pList.get(i).getLastName()))
-            {
-                return i;
+            int pMiddle = (pLow + pHigh) / 2;
+            int compare = pKey.compareToIgnoreCase((pList.get(pMiddle).getLastName));
+            if (compare == 0) {
+                return pMiddle;
+            } else if (compare < 0) {
+                pHigh = pMiddle - 1;
+            } else {
+                pLow = pMiddle + 1;
             }
+
         }
         return -1;
     }
+}
+
+//    public static int search(ArrayList<Student> pList, String pKey)
+//    {
+//        for(int i = 0; i < pList.size(); i++)
+//        {
+//            if(pKey.equals(pList.get(i).getLastName()))
+//            {
+//                return i;
+//            }
+//        }
+//        return -1;
+//    }
 }
