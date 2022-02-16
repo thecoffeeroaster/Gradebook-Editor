@@ -28,7 +28,10 @@ public class Sorter
     }
 
     /**
-     *
+     * This is the partitioning algorithm for the sorting class.
+     * The pivot is chosen by the first element in the list.
+     * This incorporates several while loops to iterate through the list,
+     * swapping contents as the sliders move towards each other.
      *
      * @param pList
      * @param pFromIndex
@@ -63,6 +66,13 @@ public class Sorter
         return rightPointerSlider;
     }
 
+    /**
+     * This method calls itself recursively to sort the items
+     *
+     * @param pList
+     * @param start
+     * @param end
+     */
     private static void quickSort(ArrayList<Student> pList, int start, int end)
     {
         if (start >= end || end < 0)
@@ -75,6 +85,13 @@ public class Sorter
         quickSort(pList, theSplit + 1, end);
     }
 
+    /**
+     * Swaps the items from pFromIndex to pToIndex
+     *
+     * @param pList
+     * @param pFromIndex
+     * @param pToIndex
+     */
     private static void swap(ArrayList<Student> pList, int pFromIndex, int pToIndex)
     {
         Student temp = pList.get(pFromIndex);
