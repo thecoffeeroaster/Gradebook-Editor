@@ -35,7 +35,8 @@ public class Sorter
 
     private static int partition(ArrayList<Student> pList, int pFromIndex, int pToIndex)
     {
-        int pivot = pFromIndex + ((int) (Math.random() * pToIndex));
+        //int pivot = pFromIndex + ((int) (Math.random() * pToIndex));
+        int pivot = pFromIndex;
 
         int leftPointerSlider = pFromIndex - 1; // Starts on the left side and moves up the list
         int rightPointerSlider = pToIndex + 1; // Starts on the right side and moves down the list
@@ -58,7 +59,7 @@ public class Sorter
                 swap(pList, leftPointerSlider, rightPointerSlider);
             }
         }
-        return pivot; //???
+        return rightPointerSlider; //???
     }
 
     private static void quickSort(ArrayList<Student> pList, int start, int end)
@@ -67,15 +68,15 @@ public class Sorter
         {
             return;
         }
-        int p = partition(pList, start, end);
+        int theSplit = partition(pList, start, end);
 
-        quickSort(pList, start, p - 1);
-        quickSort(pList, p + 1, end);
+        quickSort(pList, start, theSplit - 1);
+        quickSort(pList, theSplit + 1, end);
     }
 
     private static void swap(ArrayList<Student> pList, int pFromIndex, int pToIndex)
     {
-        Student temp = pList.get((pFromIndex));
+        Student temp = pList.get(pFromIndex);
 
         pList.set(pFromIndex, pList.get(pToIndex));
         pList.set(pToIndex, temp);

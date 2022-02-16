@@ -330,6 +330,8 @@ public class View extends JFrame implements ActionListener {
      */
     private void displayStudent(Student pStudent)
     {
+        mStudentName.setText(Student.getCurrStudent().getFullName());
+
         for(int i = 0; i < getMain().getNumHomeworks(); i++)
         {
             int hw = pStudent.getHomework(i);
@@ -341,7 +343,7 @@ public class View extends JFrame implements ActionListener {
         {
             int exam = pStudent.getExam(i);
             String examstr = Integer.toString(exam);
-            mHomeworkText[i].setText(examstr);
+            mExamText[i].setText(examstr);
         }
     }
 
