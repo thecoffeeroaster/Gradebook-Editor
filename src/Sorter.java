@@ -20,7 +20,7 @@ public class Sorter
     /**
      * This method calls the quicksort method from 0 to pList.size() - 1
      *
-     * @param pList
+     * @param pList ArrayList<Student>
      */
     public static void sort(ArrayList<Student> pList)
     {
@@ -33,10 +33,10 @@ public class Sorter
      * This incorporates several while loops to iterate through the list,
      * swapping contents as the sliders move towards each other.
      *
-     * @param pList
-     * @param pFromIndex
-     * @param pToIndex
-     * @return rightPointerSlider
+     * @param pList ArrayList<Student>
+     * @param pFromIndex int
+     * @param pToIndex int
+     * @return rightPointerSlider int
      */
     private static int partition(ArrayList<Student> pList, int pFromIndex, int pToIndex)
     {
@@ -69,9 +69,9 @@ public class Sorter
     /**
      * This method calls itself recursively to sort the items
      *
-     * @param pList
-     * @param start
-     * @param end
+     * @param pList ArrayList<Student>
+     * @param start int
+     * @param end int
      */
     private static void quickSort(ArrayList<Student> pList, int start, int end)
     {
@@ -88,9 +88,9 @@ public class Sorter
     /**
      * Swaps the items from pFromIndex to pToIndex
      *
-     * @param pList
-     * @param pFromIndex
-     * @param pToIndex
+     * @param pList ArrayList<Student>
+     * @param pFromIndex int
+     * @param pToIndex int
      */
     private static void swap(ArrayList<Student> pList, int pFromIndex, int pToIndex)
     {
