@@ -18,7 +18,8 @@ import java.lang.Math;
 public class Sorter
 {
     /**
-     * A kind of wrapper
+     * This method calls the quicksort method from 0 to pList.size() - 1
+     *
      * @param pList
      */
     public static void sort(ArrayList<Student> pList)
@@ -26,6 +27,14 @@ public class Sorter
         quickSort(pList, 0,pList.size() - 1);
     }
 
+    /**
+     *
+     *
+     * @param pList
+     * @param pFromIndex
+     * @param pToIndex
+     * @return rightPointerSlider
+     */
     private static int partition(ArrayList<Student> pList, int pFromIndex, int pToIndex)
     {
         int pivot = pFromIndex;
@@ -51,7 +60,7 @@ public class Sorter
                 swap(pList, leftPointerSlider, rightPointerSlider);
             }
         }
-        return rightPointerSlider; //???
+        return rightPointerSlider;
     }
 
     private static void quickSort(ArrayList<Student> pList, int start, int end)
