@@ -98,7 +98,7 @@ public class View extends JFrame implements ActionListener {
         // Note: DO NOT HARDCODE THE NUMBER OF HOMEWORK ASSIGNMENTS
         JPanel panelHomework = new JPanel();
         panelHomework.add(new JLabel("Homework: "));
-        mHomeworkText = new JTextField[getMain().getNumHomeworks()];
+        mHomeworkText = new JTextField[Main.getNumHomeworks()];
         for(int i = 0; i < mHomeworkText.length; i++)
         {
             mHomeworkText[i] = new JTextField(5);
@@ -225,6 +225,7 @@ public class View extends JFrame implements ActionListener {
     {
         if(pEvent.getSource() == mSearchButton)
         {
+            System.out.println("SEARCH BUTTON WAS PRESSED");
             clearNumbers();
             String lastName = mStudentName.getText();
             if(lastName.isEmpty())
@@ -246,17 +247,21 @@ public class View extends JFrame implements ActionListener {
         }
         else if(pEvent.getSource() == mSaveButton)
         {
+            System.out.println("SAVE BUTTON WAS PRESSED");
             if(Student.getCurrStudent() != null)
             {
                 saveStudent(Student.getCurrStudent());
+                System.out.println(Student.getCurrStudent().toString());
             }
         }
         else if(pEvent.getSource() == mClearButton)
         {
+            System.out.println("CLEAR BUTTON WAS PRESSED");
             clear();
         }
         else if(pEvent.getSource() == mExitButton)
         {
+            System.out.println("EXIT BUTTON WAS PRESSED");
             if(Student.getCurrStudent() != null)
             {
                 saveStudent(Student.getCurrStudent());
@@ -332,14 +337,14 @@ public class View extends JFrame implements ActionListener {
     {
         mStudentName.setText(Student.getCurrStudent().getFullName());
 
-        for(int i = 0; i < getMain().getNumHomeworks(); i++)
+        for(int i = 0; i < Main.getNumHomeworks(); i++)
         {
             int hw = pStudent.getHomework(i);
             String hwstr = Integer.toString(hw);
             mHomeworkText[i].setText(hwstr);
         }
 
-        for(int i = 0; i < getMain().getNumExams(); i++)
+        for(int i = 0; i < Main.getNumExams(); i++)
         {
             int exam = pStudent.getExam(i);
             String examstr = Integer.toString(exam);
@@ -394,17 +399,17 @@ public class View extends JFrame implements ActionListener {
      */
     private void saveStudent(Student pStudent)
     {
-        for (int i = 0; i<Main.getNumHomeworks(); i++)
+        for (int i = 0; i < Main.getNumHomeworks(); i++)
         {
             String hwstr = mHomeworkText[i].getText();
             int hw = Integer.parseInt(hwstr);
             pStudent.setHomework(i, hw);
         }
-        for (int i = 0; i<Main.getNumExams(); i++)
+        for (int i = 0; i < Main.getNumExams(); i++)
         {
             String examstr = mExamText[i].getText();
             int exam = Integer.parseInt(examstr);
-            pStudent.setHomework(i, exam);
+            pStudent.setExam(i, exam);
         }
     }
 

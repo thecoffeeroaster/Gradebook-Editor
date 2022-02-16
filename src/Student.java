@@ -67,8 +67,8 @@ public class Student implements Comparable<Student> {
     {
         this.mFirstName = pFirstName;
         this.mLastName = pLastName;
-        setExamList(new ArrayList<Integer>()); //complete here
-        setHomeworkList(new ArrayList<Integer>()); //complete here
+        setExamList(new ArrayList<Integer>());
+        setHomeworkList(new ArrayList<Integer>());
     }
 
     /**
@@ -249,7 +249,7 @@ public class Student implements Comparable<Student> {
      */
     public void setExam(int pNum, int pScore)
     {
-        getExamList().set(pNum, pScore);
+        mExamList.set(pNum, pScore);
     }
 
     /**
@@ -282,7 +282,7 @@ public class Student implements Comparable<Student> {
      */
     public void setHomework(int pNum, int pScore)
     {
-        getHomeworkList().set(pNum, pScore);
+        mHomeworkList.set(pNum, pScore);
     }
 
     /**
@@ -324,13 +324,13 @@ public class Student implements Comparable<Student> {
     public String toString()
     {
         String output = mLastName + " " + mFirstName + " ";
-        for(Integer i : mExamList)
+        for(int i = 0; i < mExamList.size(); i++)
         {
-            output += mExamList.get(i) + " ";
+            output += (mExamList.get(i).toString() + " ");
         }
-        for(Integer i : mHomeworkList)
+        for(int i = 0; i < mHomeworkList.size(); i++)
         {
-            output += mHomeworkList.get(i) + " ";
+            output += (mHomeworkList.get(i).toString() + " ");
         }
         output = output.trim();
         return output;

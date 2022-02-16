@@ -41,7 +41,6 @@ public class Main
     {
         Main main = new Main();
         main.run();
-        //Not sure if I did this right.
     }
 
     /**
